@@ -1,0 +1,429 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0
+vcomputation_control_hd
+!i10b 1
+Z1 !s100 X];<8g8FW5WE:J<Ul=d_I1
+Z2 I6TkQWdhODXRAQEiC;UBc02
+Z3 VZ;hB;aBPzQEI6oMDT:`zQ2
+Z4 dC:\Aaron_documents\Newton_method_hd\Online_div_hd
+Z5 w1448229865
+Z6 8C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/computation_control_hd.v
+Z7 FC:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/computation_control_hd.v
+L0 1
+Z8 OV;L;10.1d;51
+r1
+!s85 0
+31
+Z9 !s108 1448272721.420000
+Z10 !s107 C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/vector_delay.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/testbench_div_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/six_bits_parallel_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/six_bits_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/single_clk_ram_4bit.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/single_clk_ram_2bit.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/on_line_adder_block.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/generate_CA_reg_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/full_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/four_bits_parallel_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/four_bits_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/counter.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/computing_w_value.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/computing_v_value.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/computation_control_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/SDVM.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/Divider_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/D_FF_two_bits.v|
+Z11 !s90 -reportprogress|300|-work|work|-O0|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/D_FF_two_bits.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/Divider_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/SDVM.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/computation_control_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/computing_v_value.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/computing_w_value.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/counter.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/four_bits_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/four_bits_parallel_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/full_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/generate_CA_reg_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/on_line_adder_block.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/single_clk_ram_2bit.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/single_clk_ram_4bit.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/six_bits_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/six_bits_parallel_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/testbench_div_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/vector_delay.v|
+!s101 -O0
+Z12 o-work work -O0
+vcomputing_v_value
+!i10b 1
+Z13 !s100 o:7D3j7amPTGTIkbQ@^811
+Z14 I7O8OR7>eU]8WYUf5nb6>`1
+Z15 VzT[49lK9:lZk]j0WZ4lzW2
+R4
+Z16 w1448270488
+Z17 8C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/computing_v_value.v
+Z18 FC:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/computing_v_value.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+vcomputing_w_value
+!i10b 1
+Z19 !s100 S:_EnNMD0aDgHO_c<6ULg3
+Z20 I=^cB@YGH8P_baV[V@QQ6`3
+Z21 VJeG5LW0e]VjBzYRRg=LGN1
+R4
+Z22 w1447628559
+Z23 8C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/computing_w_value.v
+Z24 FC:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/computing_w_value.v
+L0 2
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+vcounter
+!i10b 1
+Z25 !s100 ?N3^CWY;I`GDMz=K1PL9k2
+Z26 INjRQIbbfZeF;2U=>J>05C0
+Z27 V`To]YdI=k0oSOD6ED:[dH2
+R4
+Z28 w1444573998
+Z29 8C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/counter.v
+Z30 FC:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/counter.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+vD_FF_two_bits
+!i10b 1
+Z31 !s100 6;FG2P[[S4ZDSz2RK^8Yf0
+Z32 IEeM^n0a2H[iX`gQeHi3h01
+Z33 VCokOkPUekRXBE9U=PKZ<F1
+R4
+Z34 w1444735496
+Z35 8C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/D_FF_two_bits.v
+Z36 FC:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/D_FF_two_bits.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+Z37 n@d_@f@f_two_bits
+vDivider_hd
+!i10b 1
+Z38 !s100 :aSKZlFdi5fzNz`Yac21F0
+Z39 IBH@m0b6j13?ZkASf3B2^z2
+Z40 VoE4noWg:4Z02?UUAahTU92
+R4
+Z41 w1448230835
+Z42 8C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/Divider_hd.v
+Z43 FC:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/Divider_hd.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+Z44 n@divider_hd
+vfour_bits_adder
+!i10b 1
+Z45 !s100 oYO]MgLDM9<==[[l20DW03
+Z46 IbPGhWN4763Aik3RHQaz2?1
+Z47 VEM8gHEH8Q93AZ_<KBN5JU2
+R4
+Z48 w1438703282
+Z49 8C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/four_bits_adder.v
+Z50 FC:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/four_bits_adder.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+vfour_bits_parallel_adder
+!i10b 1
+Z51 !s100 U`68DD`@?@LQQN=?4Oi670
+Z52 I_6;Xk@:=X6HO2ZY1Pml131
+Z53 V:@Y`^J5?]]0`JWH_AJ6172
+R4
+Z54 w1444925732
+Z55 8C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/four_bits_parallel_adder.v
+Z56 FC:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/four_bits_parallel_adder.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+vfull_adder
+!i10b 1
+Z57 !s100 ^E56c=aMQLCWVb1OGDRSb2
+Z58 IW5Ao[SG0M9]3>ATnBoWRB0
+Z59 VY<ik;mLW>j9l4DLC>lZ8;0
+R4
+Z60 w1444812812
+Z61 8C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/full_adder.v
+Z62 FC:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/full_adder.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+vgenerate_CA_reg_hd
+!i10b 1
+Z63 !s100 Kf8XkJ<P5GPUkBi_S4DSF3
+Z64 I73ZQ>nZdbzXNdbNTma_6f2
+Z65 VdzNnXP^iK@L`c`YkCdA?Q2
+R4
+Z66 w1448225426
+Z67 8C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/generate_CA_reg_hd.v
+Z68 FC:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/generate_CA_reg_hd.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+Z69 ngenerate_@c@a_reg_hd
+vMultiplier_hd
+Z70 !s100 01a1^DZ6DB8AEeW7Y=@dd0
+Z71 I39HlE8>aABfC]3:Ci2NGV3
+Z72 VRO5nn;KTjJ4b9V7o[69hn3
+R4
+Z73 w1445363301
+Z74 8C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/Multiplier_hd.v
+Z75 FC:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/Multiplier_hd.v
+L0 1
+R8
+r1
+31
+Z76 !s108 1445897250.320000
+Z77 !s107 C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/vector_delay.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/testbench_mult_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/single_clk_ram_4bit.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/res_control.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/on_line_adder_block.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/generate_CA_reg_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/full_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/four_bits_parallel_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/four_bits_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/counter.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/computation_control_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/V_upper_bits_control.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/SDVM.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/Multiplier_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/Divider_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/D_FF_two_bits.v|
+Z78 !s90 -reportprogress|300|-work|work|-O0|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/D_FF_two_bits.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/Divider_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/Multiplier_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/SDVM.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/V_upper_bits_control.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/computation_control_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/counter.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/four_bits_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/four_bits_parallel_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/full_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/generate_CA_reg_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/on_line_adder_block.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/res_control.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/single_clk_ram_4bit.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/testbench_mult_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/vector_delay.v|
+R12
+Z79 n@multiplier_hd
+!i10b 1
+!s85 0
+!s101 -O0
+von_line_adder_block
+!i10b 1
+Z80 !s100 Ya=29lO8CKAkN<R=ngdN<2
+Z81 I@iOlA72N]i`5BzUZ`Rhi:2
+Z82 V<7:j3QlVdDbNON;lP>F1B2
+R4
+Z83 w1444812792
+Z84 8C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/on_line_adder_block.v
+Z85 FC:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/on_line_adder_block.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+vres_control
+Z86 !s100 O5ZeHl29M?DmXf7LW:BG=0
+Z87 I68@B>Zz[B^5z?aSQo:AWU3
+Z88 V^J0]Bg?`d4^KX1KNSHK832
+R4
+Z89 w1445422469
+Z90 8C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/res_control.v
+Z91 FC:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/res_control.v
+L0 1
+R8
+r1
+31
+Z92 !s108 1445959822.946000
+Z93 !s107 C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/vector_delay.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/testbench_mult_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/testbench_div_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/single_clk_ram_4bit.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/res_control.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/on_line_adder_block.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/generate_CA_reg_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/full_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/four_bits_parallel_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/four_bits_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/counter.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/computation_control_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/V_upper_bits_control.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/SDVM.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/Divider_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/D_FF_two_bits.v|
+Z94 !s90 -reportprogress|300|-work|work|-O0|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/D_FF_two_bits.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/Divider_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/SDVM.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/V_upper_bits_control.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/computation_control_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/counter.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/four_bits_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/four_bits_parallel_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/full_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/generate_CA_reg_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/on_line_adder_block.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/res_control.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/single_clk_ram_4bit.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/testbench_div_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/testbench_mult_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/vector_delay.v|
+R12
+!i10b 1
+!s85 0
+!s101 -O0
+vSDVM
+!i10b 1
+Z95 !s100 l4a_Aj`JJHHXG=bV<?oDb3
+Z96 ID<NBi`6Lnc^Zz;VWC_h[B1
+Z97 V529HmhViU:9djcH]?Ri6M2
+R4
+Z98 w1444735241
+Z99 8C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/SDVM.v
+Z100 FC:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/SDVM.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+Z101 n@s@d@v@m
+vsingle_clk_ram_2bit
+!i10b 1
+Z102 !s100 MA61o4@m20]f1??810a;>1
+Z103 IRTVLLbol0?G]3MCdi8M`E1
+Z104 V<5ddEBe^9nOGDAYCLOEdk3
+R4
+Z105 w1448271302
+Z106 8C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/single_clk_ram_2bit.v
+Z107 FC:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/single_clk_ram_2bit.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+vsingle_clk_ram_4bit
+!i10b 1
+Z108 !s100 >_aG=;G_<oW6eX8MQG:o;3
+Z109 IgDS_0_VYkNYL:H:eAFDfo1
+Z110 VTH>BDdlcKcJklh^P_FLYb0
+R4
+Z111 w1447628433
+Z112 8C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/single_clk_ram_4bit.v
+Z113 FC:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/single_clk_ram_4bit.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+vsix_bits_adder
+!i10b 1
+Z114 !s100 ZL^W]bk5nR8@aMN^lYHAg3
+Z115 IEd7mdEzRI7[1b]D75lTz10
+Z116 V3ciW8P]CSfhh5SUla_KEL3
+R4
+Z117 w1446380210
+Z118 8C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/six_bits_adder.v
+Z119 FC:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/six_bits_adder.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+vsix_bits_parallel_adder
+!i10b 1
+Z120 !s100 j;gSVkcgz[_Dl^z<ha>;E2
+Z121 I[MOEOmaKd@f68a>Y>m:hz2
+Z122 VZd[m2MVzc19TZYFZFOXlh1
+R4
+Z123 w1446380228
+Z124 8C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/six_bits_parallel_adder.v
+Z125 FC:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/six_bits_parallel_adder.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+vtestbench_div_hd
+!i10b 1
+Z126 !s100 z@VDl91HIF]AbUL<z3Ci10
+Z127 InV4gzX5MN[]VZSMY7UT9G0
+Z128 Vj3C;GHYP8LXT[cY6mnF1A3
+R4
+Z129 w1448225981
+Z130 8C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/testbench_div_hd.v
+Z131 FC:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/testbench_div_hd.v
+L0 2
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12
+vtestbench_mult_hd
+Z132 !s100 iCB`SMM?zYTSWTQVY_mM72
+Z133 Im^k7WPcImm0P_IGII:^?g2
+Z134 Vf4E>l[FeDX0DA:2z25Cji2
+R4
+Z135 w1445514690
+Z136 8C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/testbench_mult_hd.v
+Z137 FC:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/testbench_mult_hd.v
+L0 2
+R8
+r1
+31
+Z138 !s108 1445897328.557000
+Z139 !s107 C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/vector_delay.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/testbench_mult_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/single_clk_ram_4bit.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/res_control.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/on_line_adder_block.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/generate_CA_reg_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/full_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/four_bits_parallel_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/four_bits_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/counter.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/computation_control_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/V_upper_bits_control.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/SDVM.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/Divider_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/D_FF_two_bits.v|
+Z140 !s90 -reportprogress|300|-work|work|-O0|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/D_FF_two_bits.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/Divider_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/SDVM.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/V_upper_bits_control.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/computation_control_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/counter.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/four_bits_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/four_bits_parallel_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/full_adder.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/generate_CA_reg_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/on_line_adder_block.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/res_control.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/single_clk_ram_4bit.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/testbench_mult_hd.v|C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/vector_delay.v|
+R12
+!i10b 1
+!s85 0
+!s101 -O0
+vV_upper_bits_control
+Z141 !s100 ;DTkJTWI40cO80iHQBUL^0
+Z142 IH6NPFn<3hjhU6X^jc7P:]1
+Z143 Vb]^4N0Re`L<AZYK=4oP1I3
+R4
+Z144 w1445512829
+Z145 8C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/V_upper_bits_control.v
+Z146 FC:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/V_upper_bits_control.v
+L0 1
+R8
+r1
+31
+R92
+R93
+R94
+R12
+Z147 n@v_upper_bits_control
+!i10b 1
+!s85 0
+!s101 -O0
+vvector_delay
+!i10b 1
+Z148 !s100 WfU@PXon?QF^GoQo:VO272
+Z149 IFBW@2jN8kG7]kWR@T9ZF;3
+Z150 V:A;@1U@SAJWz1J`k70jd01
+R4
+Z151 w1445964692
+Z152 8C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/vector_delay.v
+Z153 FC:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/vector_delay.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!s101 -O0
+R12

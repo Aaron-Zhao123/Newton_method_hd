@@ -1,0 +1,8 @@
+module computing_v_value(q_plus_vec, q_minus_vec, residue_plus, residue_minus, d_value_reg, x_value_reg, )
+
+parameter UNROLLING= 4;
+parameter UPPER_BITS = 5;
+
+input [UNROLLING-1:0] q_plus_vec, q_minus_vec, residue_plus, residue_minus;
+input [1:0] d_value_reg, x_value_reg;
+

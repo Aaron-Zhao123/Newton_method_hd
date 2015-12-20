@@ -1,0 +1,44 @@
+vlog -work work -O0 {C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/*.v}
+view wave
+vsim work.testbench_div_hd
+add wave -position end  sim:/testbench_div_hd/x_value
+
+add wave -position end  sim:/testbench_div_hd/d_value
+add wave -position end  sim:/testbench_div_hd/q_value
+add wave -position end  sim:/testbench_div_hd/data_d_vld
+add wave -position end  sim:/testbench_div_hd/data_d_rdy
+add wave -position end  sim:/testbench_div_hd/data_x_vld
+add wave -position end  sim:/testbench_div_hd/data_x_rdy
+add wave -position end  sim:/testbench_div_hd/data_out_vld
+add wave -position end  sim:/testbench_div_hd/data_out_rdy
+add wave -position end  sim:/testbench_div_hd/data_in_file_y
+add wave -position end  sim:/testbench_div_hd/data_in_file_x
+add wave -position end  sim:/testbench_div_hd/d_value
+add wave -position end  sim:/testbench_div_hd/cnt
+add wave -position end  sim:/testbench_div_hd/clk
+add wave -position end  sim:/testbench_div_hd/asyn_reset
+
+add wave -position end  sim:/testbench_div_hd/test/CA_reg/x_plus
+add wave -position end  sim:/testbench_div_hd/test/CA_reg/x_minus
+add wave -position end  sim:/testbench_div_hd/test/CA_reg/y_plus
+add wave -position end  sim:/testbench_div_hd/test/CA_reg/y_minus
+add wave -position end  sim:/testbench_div_hd/test/FSM/STATE
+add wave -position end  sim:/testbench_div_hd/test/V_block/v_upper_value
+add wave -position end  sim:/testbench_div_hd/test/V_block/v_upper_plus
+add wave -position end  sim:/testbench_div_hd/test/V_block/v_upper_minus
+add wave -position end  sim:/testbench_div_hd/test/V_block/v_plus_vec
+add wave -position end  sim:/testbench_div_hd/test/V_block/v_minus_vec
+add wave -position end  sim:/testbench_div_hd/test/W_block/w_upper_plus
+add wave -position end  sim:/testbench_div_hd/test/W_block/w_upper_minus
+add wave -position end  sim:/testbench_div_hd/test/W_block/w_plus_vec
+add wave -position end  sim:/testbench_div_hd/test/W_block/w_minus_vec
+add wave -position end  sim:/testbench_div_hd/test/V_block/residue_plus
+add wave -position end  sim:/testbench_div_hd/test/V_block/residue_minus
+add wave -position end  sim:/testbench_div_hd/test/V_block/res_upper_plus
+add wave -position end  sim:/testbench_div_hd/test/V_block/res_upper_minus
+run 1000ns
+
+0001000000111
+0010110101010
+------------------
+1110000001101

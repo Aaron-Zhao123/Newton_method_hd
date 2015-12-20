@@ -1,0 +1,12 @@
+module Divider_hd (
+x_value, 
+d_value, 
+q_value, 
+clk, 
+asyn_reset,
+data_x_vld,
+data_x_rdy,
+data_d_vld,
+data_d_rdy,
+data_out_vld,
+data_out_rdy);

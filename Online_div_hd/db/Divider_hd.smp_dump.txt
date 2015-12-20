@@ -1,0 +1,5 @@
+
+State Machine - |Divider_hd|computation_control_hd:FSM|prev_STATE
+Name prev_STATE.ERROR 
+prev_STATE.START 0 
+prev_STATE.ERROR 1 

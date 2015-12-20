@@ -1,0 +1,1344 @@
+Analysis & Synthesis report for Divider_hd
+Mon Nov 23 09:35:22 2015
+Quartus II 32-bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: Top-level Entity: |Divider_hd
+ 13. Parameter Settings for User Entity Instance: computation_control_hd:FSM
+ 14. Parameter Settings for User Entity Instance: generate_CA_reg_hd:CA_reg
+ 15. Parameter Settings for User Entity Instance: generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1
+ 16. Parameter Settings for User Entity Instance: generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram2
+ 17. Parameter Settings for User Entity Instance: generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram3
+ 18. Parameter Settings for User Entity Instance: generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram4
+ 19. Parameter Settings for User Entity Instance: generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram5
+ 20. Parameter Settings for User Entity Instance: generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram6
+ 21. Parameter Settings for User Entity Instance: generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram7
+ 22. Parameter Settings for User Entity Instance: generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram8
+ 23. Parameter Settings for User Entity Instance: counter:main_counter
+ 24. Parameter Settings for User Entity Instance: vector_delay:vec_D
+ 25. Parameter Settings for User Entity Instance: SDVM:SDVM_q_Vec
+ 26. Parameter Settings for User Entity Instance: SDVM:SDVM_d_Vec
+ 27. Parameter Settings for User Entity Instance: computing_v_value:V_block
+ 28. Parameter Settings for User Entity Instance: computing_v_value:V_block|single_clk_ram_4bit:ram1
+ 29. Parameter Settings for User Entity Instance: computing_v_value:V_block|single_clk_ram_4bit:ram2
+ 30. Parameter Settings for User Entity Instance: computing_v_value:V_block|four_bits_adder:adder1
+ 31. Parameter Settings for User Entity Instance: computing_w_value:W_block
+ 32. Parameter Settings for User Entity Instance: computing_w_value:W_block|four_bits_adder:adder1
+ 33. Parameter Settings for User Entity Instance: computing_w_value:W_block|six_bits_adder:adder2
+ 34. Parameter Settings for User Entity Instance: computing_w_value:W_block|single_clk_ram_4bit:ram1
+ 35. Parameter Settings for User Entity Instance: computing_w_value:W_block|single_clk_ram_4bit:ram2
+ 36. Port Connectivity Checks: "computing_w_value:W_block|six_bits_adder:adder2"
+ 37. Port Connectivity Checks: "vector_delay:vec_D"
+ 38. Port Connectivity Checks: "computation_control_hd:FSM"
+ 39. Elapsed Time Per Partition
+ 40. Analysis & Synthesis Messages
+ 41. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Nov 23 09:35:22 2015       ;
+; Quartus II 32-bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
+; Revision Name                      ; Divider_hd                                  ;
+; Top-level Entity Name              ; Divider_hd                                  ;
+; Family                             ; Cyclone IV GX                               ;
+; Total logic elements               ; 8,095                                       ;
+;     Total combinational functions  ; 4,257                                       ;
+;     Dedicated logic registers      ; 3,953                                       ;
+; Total registers                    ; 3953                                        ;
+; Total pins                         ; 14                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total GXB Receiver Channel PCS     ; 0                                           ;
+; Total GXB Receiver Channel PMA     ; 0                                           ;
+; Total GXB Transmitter Channel PCS  ; 0                                           ;
+; Total GXB Transmitter Channel PMA  ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; Divider_hd         ; Divider_hd         ;
+; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ; < 0.1%      ;
+;     Processors 5-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                           ;
++-------------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path    ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                          ; Library ;
++-------------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------+---------+
+; src_div_hd/Divider_hd.v             ; yes             ; User Verilog HDL File  ; C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/Divider_hd.v             ;         ;
+; src_div_hd/generate_CA_reg_hd.v     ; yes             ; User Verilog HDL File  ; C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/generate_CA_reg_hd.v     ;         ;
+; src_div_hd/computation_control_hd.v ; yes             ; User Verilog HDL File  ; C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/computation_control_hd.v ;         ;
+; src_div_hd/counter.v                ; yes             ; User Verilog HDL File  ; C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/counter.v                ;         ;
+; src_div_hd/full_adder.v             ; yes             ; User Verilog HDL File  ; C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/full_adder.v             ;         ;
+; src_div_hd/D_FF_two_bits.v          ; yes             ; User Verilog HDL File  ; C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/D_FF_two_bits.v          ;         ;
+; src_div_hd/single_clk_ram_4bit.v    ; yes             ; User Verilog HDL File  ; C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/single_clk_ram_4bit.v    ;         ;
+; src_div_hd/vector_delay.v           ; yes             ; User Verilog HDL File  ; C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/vector_delay.v           ;         ;
+; src_div_hd/SDVM.v                   ; yes             ; User Verilog HDL File  ; C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/SDVM.v                   ;         ;
+; src_div_hd/four_bits_adder.v        ; yes             ; User Verilog HDL File  ; C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/four_bits_adder.v        ;         ;
+; src_div_hd/computing_v_value.v      ; yes             ; User Verilog HDL File  ; C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/computing_v_value.v      ;         ;
+; src_div_hd/on_line_adder_block.v    ; yes             ; User Verilog HDL File  ; C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/on_line_adder_block.v    ;         ;
+; src_div_hd/computing_w_value.v      ; yes             ; User Verilog HDL File  ; C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/computing_w_value.v      ;         ;
+; src_div_hd/six_bits_adder.v         ; yes             ; User Verilog HDL File  ; C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/six_bits_adder.v         ;         ;
+; src_div_hd/single_clk_ram_2bit.v    ; yes             ; User Verilog HDL File  ; C:/Aaron_documents/Newton_method_hd/Online_div_hd/src_div_hd/single_clk_ram_2bit.v    ;         ;
++-------------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++--------------------------+------------------+
+; Resource                 ; Usage            ;
++--------------------------+------------------+
+; I/O pins                 ; 14               ;
+; DSP block 9-bit elements ; 0                ;
+; Maximum fan-out node     ; asyn_reset~input ;
+; Maximum fan-out          ; 3985             ;
+; Total fan-out            ; 31434            ;
+; Average fan-out          ; 3.82             ;
++--------------------------+------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                               ;
++-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                  ; Library Name ;
++-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------+--------------+
+; |Divider_hd                                         ; 4257 (0)          ; 3953 (0)     ; 0           ; 0            ; 0       ; 0         ; 0         ; 14   ; 0            ; |Divider_hd                                                                                                          ;              ;
+;    |SDVM:SDVM_d_Vec|                                ; 682 (680)         ; 2 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|SDVM:SDVM_d_Vec                                                                                          ;              ;
+;       |D_FF_two_bits:D1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|SDVM:SDVM_d_Vec|D_FF_two_bits:D1                                                                         ;              ;
+;    |SDVM:SDVM_q_Vec|                                ; 686 (684)         ; 2 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|SDVM:SDVM_q_Vec                                                                                          ;              ;
+;       |D_FF_two_bits:D1|                            ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|SDVM:SDVM_q_Vec|D_FF_two_bits:D1                                                                         ;              ;
+;    |computation_control_hd:FSM|                     ; 145 (145)         ; 39 (39)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computation_control_hd:FSM                                                                               ;              ;
+;    |computing_v_value:V_block|                      ; 934 (785)         ; 1048 (24)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_v_value:V_block                                                                                ;              ;
+;       |four_bits_adder:adder1|                      ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_v_value:V_block|four_bits_adder:adder1                                                         ;              ;
+;          |on_line_adder_block:adder_chain[0].Block| ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_v_value:V_block|four_bits_adder:adder1|on_line_adder_block:adder_chain[0].Block                ;              ;
+;             |full_adder:FA1|                        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_v_value:V_block|four_bits_adder:adder1|on_line_adder_block:adder_chain[0].Block|full_adder:FA1 ;              ;
+;          |on_line_adder_block:adder_chain[1].Block| ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_v_value:V_block|four_bits_adder:adder1|on_line_adder_block:adder_chain[1].Block                ;              ;
+;             |full_adder:FA1|                        ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_v_value:V_block|four_bits_adder:adder1|on_line_adder_block:adder_chain[1].Block|full_adder:FA1 ;              ;
+;          |on_line_adder_block:adder_chain[2].Block| ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_v_value:V_block|four_bits_adder:adder1|on_line_adder_block:adder_chain[2].Block                ;              ;
+;             |full_adder:FA1|                        ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_v_value:V_block|four_bits_adder:adder1|on_line_adder_block:adder_chain[2].Block|full_adder:FA1 ;              ;
+;          |on_line_adder_block:adder_chain[3].Block| ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_v_value:V_block|four_bits_adder:adder1|on_line_adder_block:adder_chain[3].Block                ;              ;
+;             |full_adder:FA1|                        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_v_value:V_block|four_bits_adder:adder1|on_line_adder_block:adder_chain[3].Block|full_adder:FA1 ;              ;
+;             |full_adder:FA2|                        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_v_value:V_block|four_bits_adder:adder1|on_line_adder_block:adder_chain[3].Block|full_adder:FA2 ;              ;
+;       |single_clk_ram_4bit:ram1|                    ; 136 (136)         ; 512 (512)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_v_value:V_block|single_clk_ram_4bit:ram1                                                       ;              ;
+;       |single_clk_ram_4bit:ram2|                    ; 0 (0)             ; 512 (512)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_v_value:V_block|single_clk_ram_4bit:ram2                                                       ;              ;
+;    |computing_w_value:W_block|                      ; 706 (15)          ; 797 (22)     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block                                                                                ;              ;
+;       |four_bits_adder:adder1|                      ; 15 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|four_bits_adder:adder1                                                         ;              ;
+;          |on_line_adder_block:adder_chain[0].Block| ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|four_bits_adder:adder1|on_line_adder_block:adder_chain[0].Block                ;              ;
+;             |full_adder:FA1|                        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|four_bits_adder:adder1|on_line_adder_block:adder_chain[0].Block|full_adder:FA1 ;              ;
+;             |full_adder:FA2|                        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|four_bits_adder:adder1|on_line_adder_block:adder_chain[0].Block|full_adder:FA2 ;              ;
+;          |on_line_adder_block:adder_chain[1].Block| ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|four_bits_adder:adder1|on_line_adder_block:adder_chain[1].Block                ;              ;
+;             |full_adder:FA1|                        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|four_bits_adder:adder1|on_line_adder_block:adder_chain[1].Block|full_adder:FA1 ;              ;
+;             |full_adder:FA2|                        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|four_bits_adder:adder1|on_line_adder_block:adder_chain[1].Block|full_adder:FA2 ;              ;
+;          |on_line_adder_block:adder_chain[2].Block| ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|four_bits_adder:adder1|on_line_adder_block:adder_chain[2].Block                ;              ;
+;             |full_adder:FA1|                        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|four_bits_adder:adder1|on_line_adder_block:adder_chain[2].Block|full_adder:FA1 ;              ;
+;             |full_adder:FA2|                        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|four_bits_adder:adder1|on_line_adder_block:adder_chain[2].Block|full_adder:FA2 ;              ;
+;          |on_line_adder_block:adder_chain[3].Block| ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|four_bits_adder:adder1|on_line_adder_block:adder_chain[3].Block                ;              ;
+;             |full_adder:FA1|                        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|four_bits_adder:adder1|on_line_adder_block:adder_chain[3].Block|full_adder:FA1 ;              ;
+;             |full_adder:FA2|                        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|four_bits_adder:adder1|on_line_adder_block:adder_chain[3].Block|full_adder:FA2 ;              ;
+;       |single_clk_ram_4bit:ram1|                    ; 253 (253)         ; 384 (384)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|single_clk_ram_4bit:ram1                                                       ;              ;
+;       |single_clk_ram_4bit:ram2|                    ; 406 (406)         ; 391 (391)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|single_clk_ram_4bit:ram2                                                       ;              ;
+;       |six_bits_adder:adder2|                       ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|six_bits_adder:adder2                                                          ;              ;
+;          |on_line_adder_block:adder_chain[0].Block| ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|six_bits_adder:adder2|on_line_adder_block:adder_chain[0].Block                 ;              ;
+;             |full_adder:FA1|                        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|six_bits_adder:adder2|on_line_adder_block:adder_chain[0].Block|full_adder:FA1  ;              ;
+;             |full_adder:FA2|                        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|six_bits_adder:adder2|on_line_adder_block:adder_chain[0].Block|full_adder:FA2  ;              ;
+;          |on_line_adder_block:adder_chain[1].Block| ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|six_bits_adder:adder2|on_line_adder_block:adder_chain[1].Block                 ;              ;
+;             |full_adder:FA1|                        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|six_bits_adder:adder2|on_line_adder_block:adder_chain[1].Block|full_adder:FA1  ;              ;
+;             |full_adder:FA2|                        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|six_bits_adder:adder2|on_line_adder_block:adder_chain[1].Block|full_adder:FA2  ;              ;
+;          |on_line_adder_block:adder_chain[2].Block| ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|six_bits_adder:adder2|on_line_adder_block:adder_chain[2].Block                 ;              ;
+;             |full_adder:FA1|                        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|six_bits_adder:adder2|on_line_adder_block:adder_chain[2].Block|full_adder:FA1  ;              ;
+;             |full_adder:FA2|                        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|six_bits_adder:adder2|on_line_adder_block:adder_chain[2].Block|full_adder:FA2  ;              ;
+;          |on_line_adder_block:adder_chain[3].Block| ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|six_bits_adder:adder2|on_line_adder_block:adder_chain[3].Block                 ;              ;
+;             |full_adder:FA1|                        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|six_bits_adder:adder2|on_line_adder_block:adder_chain[3].Block|full_adder:FA1  ;              ;
+;             |full_adder:FA2|                        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|six_bits_adder:adder2|on_line_adder_block:adder_chain[3].Block|full_adder:FA2  ;              ;
+;          |on_line_adder_block:adder_chain[4].Block| ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|six_bits_adder:adder2|on_line_adder_block:adder_chain[4].Block                 ;              ;
+;             |full_adder:FA2|                        ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|computing_w_value:W_block|six_bits_adder:adder2|on_line_adder_block:adder_chain[4].Block|full_adder:FA2  ;              ;
+;    |counter:main_counter|                           ; 10 (10)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|counter:main_counter                                                                                     ;              ;
+;    |generate_CA_reg_hd:CA_reg|                      ; 1094 (24)         ; 2055 (0)     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|generate_CA_reg_hd:CA_reg                                                                                ;              ;
+;       |single_clk_ram_2bit:ram1|                    ; 150 (150)         ; 263 (263)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1                                                       ;              ;
+;       |single_clk_ram_2bit:ram2|                    ; 128 (128)         ; 256 (256)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram2                                                       ;              ;
+;       |single_clk_ram_2bit:ram3|                    ; 128 (128)         ; 256 (256)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram3                                                       ;              ;
+;       |single_clk_ram_2bit:ram4|                    ; 128 (128)         ; 256 (256)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram4                                                       ;              ;
+;       |single_clk_ram_2bit:ram5|                    ; 128 (128)         ; 256 (256)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram5                                                       ;              ;
+;       |single_clk_ram_2bit:ram6|                    ; 128 (128)         ; 256 (256)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram6                                                       ;              ;
+;       |single_clk_ram_2bit:ram7|                    ; 128 (128)         ; 256 (256)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram7                                                       ;              ;
+;       |single_clk_ram_2bit:ram8|                    ; 152 (152)         ; 256 (256)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Divider_hd|generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram8                                                       ;              ;
++-----------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                          ;
++----------------------------------------------------------------+----------------------------------------------------------------------------+
+; Register name                                                  ; Reason for Removal                                                         ;
++----------------------------------------------------------------+----------------------------------------------------------------------------+
+; computing_w_value:W_block|shift_in[0,1]                        ; Stuck at GND due to stuck port data_in                                     ;
+; computing_v_value:V_block|borrow_out                           ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[127][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[126][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[125][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[124][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[123][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[122][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[121][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[120][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[119][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[118][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[117][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[116][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[115][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[114][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[113][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[112][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[111][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[110][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[109][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[108][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[107][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[106][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[105][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[104][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[103][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[102][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[101][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[100][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[99][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[98][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[97][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[96][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[95][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[94][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[93][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[92][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[91][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[90][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[89][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[88][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[87][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[86][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[85][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[84][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[83][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[82][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[81][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[80][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[79][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[78][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[77][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[76][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[75][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[74][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[73][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[72][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[71][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[70][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[69][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[68][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[67][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[66][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[65][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[64][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[63][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[62][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[61][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[60][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[59][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[58][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[57][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[56][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[55][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[54][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[53][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[52][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[51][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[50][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[49][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[48][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[47][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[46][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[45][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[44][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[43][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[42][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[41][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[40][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[39][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[38][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[37][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[36][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[35][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[34][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[33][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[32][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[31][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[30][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[29][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[28][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[27][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[26][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[25][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[24][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[23][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[22][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[21][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[20][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[19][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[18][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[17][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[16][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[15][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[14][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[13][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[12][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[11][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[10][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[9][0]   ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[8][0]   ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[7][0]   ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[6][0]   ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[5][0]   ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[4][0]   ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[3][0]   ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[2][0]   ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[1][0]   ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[0][0]   ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[127][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[126][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[125][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[124][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[123][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[122][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[121][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[120][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[119][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[118][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[117][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[116][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[115][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[114][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[113][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[112][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[111][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[110][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[109][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[108][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[107][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[106][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[105][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[104][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[103][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[102][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[101][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[100][0] ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[99][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[98][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[97][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[96][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[95][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[94][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[93][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[92][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[91][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[90][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[89][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[88][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[87][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[86][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[85][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[84][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[83][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[82][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[81][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[80][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[79][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[78][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[77][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[76][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[75][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[74][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[73][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[72][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[71][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[70][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[69][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[68][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[67][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[66][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[65][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[64][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[63][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[62][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[61][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[60][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[59][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[58][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[57][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[56][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[55][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[54][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[53][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[52][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[51][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[50][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[49][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[48][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[47][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[46][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[45][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[44][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[43][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[42][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[41][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[40][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[39][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[38][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[37][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[36][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[35][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[34][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[33][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[32][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[31][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[30][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[29][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[28][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[27][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[26][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[25][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[24][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[23][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[22][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[21][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[20][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[19][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[18][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[17][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[16][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[15][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[14][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[13][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[12][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[11][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[10][0]  ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[9][0]   ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[8][0]   ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[7][0]   ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[6][0]   ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[5][0]   ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[4][0]   ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[3][0]   ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[2][0]   ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[1][0]   ; Stuck at GND due to stuck port data_in                                     ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[0][0]   ; Stuck at GND due to stuck port data_in                                     ;
+; computing_v_value:V_block|single_clk_ram_4bit:ram1|addr_reg[0] ; Merged with computing_w_value:W_block|single_clk_ram_4bit:ram2|addr_reg[0] ;
+; computing_v_value:V_block|single_clk_ram_4bit:ram2|addr_reg[0] ; Merged with computing_w_value:W_block|single_clk_ram_4bit:ram2|addr_reg[0] ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|addr_reg[0] ; Merged with computing_w_value:W_block|single_clk_ram_4bit:ram2|addr_reg[0] ;
+; computing_v_value:V_block|single_clk_ram_4bit:ram1|addr_reg[6] ; Merged with computing_w_value:W_block|single_clk_ram_4bit:ram2|addr_reg[6] ;
+; computing_v_value:V_block|single_clk_ram_4bit:ram2|addr_reg[6] ; Merged with computing_w_value:W_block|single_clk_ram_4bit:ram2|addr_reg[6] ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|addr_reg[6] ; Merged with computing_w_value:W_block|single_clk_ram_4bit:ram2|addr_reg[6] ;
+; computing_v_value:V_block|single_clk_ram_4bit:ram1|addr_reg[5] ; Merged with computing_w_value:W_block|single_clk_ram_4bit:ram2|addr_reg[5] ;
+; computing_v_value:V_block|single_clk_ram_4bit:ram2|addr_reg[5] ; Merged with computing_w_value:W_block|single_clk_ram_4bit:ram2|addr_reg[5] ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|addr_reg[5] ; Merged with computing_w_value:W_block|single_clk_ram_4bit:ram2|addr_reg[5] ;
+; computing_v_value:V_block|single_clk_ram_4bit:ram1|addr_reg[4] ; Merged with computing_w_value:W_block|single_clk_ram_4bit:ram2|addr_reg[4] ;
+; computing_v_value:V_block|single_clk_ram_4bit:ram2|addr_reg[4] ; Merged with computing_w_value:W_block|single_clk_ram_4bit:ram2|addr_reg[4] ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|addr_reg[4] ; Merged with computing_w_value:W_block|single_clk_ram_4bit:ram2|addr_reg[4] ;
+; computing_v_value:V_block|single_clk_ram_4bit:ram1|addr_reg[3] ; Merged with computing_w_value:W_block|single_clk_ram_4bit:ram2|addr_reg[3] ;
+; computing_v_value:V_block|single_clk_ram_4bit:ram2|addr_reg[3] ; Merged with computing_w_value:W_block|single_clk_ram_4bit:ram2|addr_reg[3] ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|addr_reg[3] ; Merged with computing_w_value:W_block|single_clk_ram_4bit:ram2|addr_reg[3] ;
+; computing_v_value:V_block|single_clk_ram_4bit:ram1|addr_reg[2] ; Merged with computing_w_value:W_block|single_clk_ram_4bit:ram2|addr_reg[2] ;
+; computing_v_value:V_block|single_clk_ram_4bit:ram2|addr_reg[2] ; Merged with computing_w_value:W_block|single_clk_ram_4bit:ram2|addr_reg[2] ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|addr_reg[2] ; Merged with computing_w_value:W_block|single_clk_ram_4bit:ram2|addr_reg[2] ;
+; computing_v_value:V_block|single_clk_ram_4bit:ram1|addr_reg[1] ; Merged with computing_w_value:W_block|single_clk_ram_4bit:ram2|addr_reg[1] ;
+; computing_v_value:V_block|single_clk_ram_4bit:ram2|addr_reg[1] ; Merged with computing_w_value:W_block|single_clk_ram_4bit:ram2|addr_reg[1] ;
+; computing_w_value:W_block|single_clk_ram_4bit:ram1|addr_reg[1] ; Merged with computing_w_value:W_block|single_clk_ram_4bit:ram2|addr_reg[1] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram2|addr_reg[0] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[0] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram3|addr_reg[0] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[0] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram4|addr_reg[0] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[0] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram5|addr_reg[0] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[0] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram6|addr_reg[0] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[0] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram7|addr_reg[0] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[0] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram8|addr_reg[0] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[0] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram2|addr_reg[6] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[6] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram3|addr_reg[6] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[6] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram4|addr_reg[6] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[6] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram5|addr_reg[6] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[6] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram6|addr_reg[6] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[6] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram7|addr_reg[6] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[6] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram8|addr_reg[6] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[6] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram2|addr_reg[5] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[5] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram3|addr_reg[5] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[5] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram4|addr_reg[5] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[5] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram5|addr_reg[5] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[5] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram6|addr_reg[5] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[5] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram7|addr_reg[5] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[5] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram8|addr_reg[5] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[5] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram2|addr_reg[4] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[4] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram3|addr_reg[4] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[4] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram4|addr_reg[4] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[4] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram5|addr_reg[4] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[4] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram6|addr_reg[4] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[4] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram7|addr_reg[4] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[4] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram8|addr_reg[4] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[4] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram2|addr_reg[3] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[3] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram3|addr_reg[3] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[3] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram4|addr_reg[3] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[3] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram5|addr_reg[3] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[3] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram6|addr_reg[3] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[3] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram7|addr_reg[3] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[3] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram8|addr_reg[3] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[3] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram2|addr_reg[2] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[2] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram3|addr_reg[2] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[2] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram4|addr_reg[2] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[2] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram5|addr_reg[2] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[2] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram6|addr_reg[2] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[2] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram7|addr_reg[2] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[2] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram8|addr_reg[2] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[2] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram2|addr_reg[1] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[1] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram3|addr_reg[1] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[1] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram4|addr_reg[1] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[1] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram5|addr_reg[1] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[1] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram6|addr_reg[1] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[1] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram7|addr_reg[1] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[1] ;
+; generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram8|addr_reg[1] ; Merged with generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[1] ;
+; Total Number of Removed Registers = 329                        ;                                                                            ;
++----------------------------------------------------------------+----------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                         ;
++---------------------------------------+---------------------------+-----------------------------------------------------------------+
+; Register name                         ; Reason for Removal        ; Registers Removed due to This Register                          ;
++---------------------------------------+---------------------------+-----------------------------------------------------------------+
+; computing_w_value:W_block|shift_in[1] ; Stuck at GND              ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[127][0], ;
+;                                       ; due to stuck port data_in ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[126][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[125][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[124][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[123][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[122][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[121][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[120][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[119][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[118][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[117][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[116][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[115][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[114][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[113][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[112][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[111][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[110][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[109][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[108][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[107][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[106][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[105][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[104][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[103][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[102][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[101][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[100][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[99][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[98][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[97][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[96][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[95][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[94][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[93][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[92][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[91][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[90][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[89][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[88][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[87][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[86][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[85][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[84][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[83][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[82][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[81][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[80][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[79][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[78][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[77][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[76][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[75][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[74][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[73][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[72][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[71][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[70][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[69][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[68][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[67][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[66][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[65][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[64][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[63][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[62][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[61][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[60][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[59][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[58][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[57][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[56][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[55][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[54][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[53][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[52][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[51][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[50][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[49][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[48][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[47][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[46][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[45][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[44][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[43][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[42][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[41][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[40][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[39][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[38][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[37][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[36][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[35][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[34][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[33][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[32][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[31][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[30][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[29][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[28][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[27][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[26][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[25][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[24][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[23][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[22][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[21][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[20][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[19][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[18][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[17][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[16][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[15][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[14][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[13][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[12][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[11][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[10][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[9][0],   ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[8][0],   ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[7][0],   ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[6][0],   ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[5][0],   ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[4][0],   ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[3][0],   ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[2][0],   ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[1][0],   ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram1|mem[0][0]    ;
+; computing_w_value:W_block|shift_in[0] ; Stuck at GND              ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[127][0], ;
+;                                       ; due to stuck port data_in ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[126][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[125][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[124][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[123][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[122][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[121][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[120][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[119][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[118][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[117][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[116][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[115][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[114][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[113][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[112][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[111][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[110][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[109][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[108][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[107][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[106][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[105][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[104][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[103][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[102][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[101][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[100][0], ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[99][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[98][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[97][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[96][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[95][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[94][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[93][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[92][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[91][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[90][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[89][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[88][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[87][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[86][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[85][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[84][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[83][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[82][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[81][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[80][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[79][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[78][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[77][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[76][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[75][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[74][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[73][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[72][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[71][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[70][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[69][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[68][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[67][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[66][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[65][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[64][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[63][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[62][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[61][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[60][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[59][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[58][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[57][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[56][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[55][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[54][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[53][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[52][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[51][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[50][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[49][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[48][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[47][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[46][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[45][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[44][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[43][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[42][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[41][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[40][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[39][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[38][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[37][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[36][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[35][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[34][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[33][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[32][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[31][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[30][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[29][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[28][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[27][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[26][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[25][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[24][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[23][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[22][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[21][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[20][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[19][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[18][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[17][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[16][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[15][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[14][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[13][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[12][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[11][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[10][0],  ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[9][0],   ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[8][0],   ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[7][0],   ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[6][0],   ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[5][0],   ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[4][0],   ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[3][0],   ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[2][0],   ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[1][0],   ;
+;                                       ;                           ; computing_w_value:W_block|single_clk_ram_4bit:ram2|mem[0][0]    ;
++---------------------------------------+---------------------------+-----------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 3953  ;
+; Number of registers using Synchronous Clear  ; 9     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 3953  ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 3903  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |Divider_hd|generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1|addr_reg[5] ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Divider_hd|counter:main_counter|cnt[0]                                    ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |Divider_hd|computation_control_hd:FSM|x_value_reg[1]                      ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 2 LEs                ; 10 LEs                 ; Yes        ; |Divider_hd|computation_control_hd:FSM|q_value[0]                          ;
+; 10:1               ; 7 bits    ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; Yes        ; |Divider_hd|computation_control_hd:FSM|computation_cycle[2]                ;
+; 13:1               ; 14 bits   ; 112 LEs       ; 42 LEs               ; 70 LEs                 ; Yes        ; |Divider_hd|computation_control_hd:FSM|rd_addr_RAM[4]                      ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Divider_hd|computation_control_hd:FSM|STATE[2]                            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |Divider_hd|computation_control_hd:FSM|data_x_rdy                          ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |Divider_hd|computing_v_value:V_block|v_upper_minus[1]                     ;
+; 128:1              ; 6 bits    ; 510 LEs       ; 510 LEs              ; 0 LEs                  ; No         ; |Divider_hd|computing_w_value:W_block|single_clk_ram_4bit:ram2|Mux0        ;
+; 129:1              ; 8 bits    ; 688 LEs       ; 688 LEs              ; 0 LEs                  ; No         ; |Divider_hd|computing_v_value:V_block|v_minus_vec_out[0]                   ;
+; 259:1              ; 8 bits    ; 1376 LEs      ; 1368 LEs             ; 8 LEs                  ; No         ; |Divider_hd|SDVM:SDVM_q_Vec|vec_out_plus[3]                                ;
+; 259:1              ; 8 bits    ; 1376 LEs      ; 1368 LEs             ; 8 LEs                  ; No         ; |Divider_hd|SDVM:SDVM_d_Vec|vec_out_plus[3]                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Divider_hd ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; RAM_ADDR_WIDTH ; 7     ; Signed Integer                                    ;
+; UNROLL_WIDTH   ; 4     ; Signed Integer                                    ;
+; UPPER_BITS     ; 6     ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: computation_control_hd:FSM ;
++--------------------+-------+--------------------------------------------+
+; Parameter Name     ; Value ; Type                                       ;
++--------------------+-------+--------------------------------------------+
+; RAM_ADDR_WIDTH     ; 7     ; Signed Integer                             ;
+; START              ; 000   ; Unsigned Binary                            ;
+; WRITE_IN           ; 001   ; Unsigned Binary                            ;
+; READ_OUT           ; 010   ; Unsigned Binary                            ;
+; READ_OUT_LAST_LINE ; 011   ; Unsigned Binary                            ;
+; CLEAR              ; 100   ; Unsigned Binary                            ;
+; ERROR              ; 101   ; Unsigned Binary                            ;
++--------------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: generate_CA_reg_hd:CA_reg ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; Num_bits       ; 4     ; Signed Integer                                ;
+; RAM_ADDR_WIDTH ; 7     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1 ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; DATA_WIDTH     ; 2     ; Signed Integer                                                         ;
+; ADDR_WIDTH     ; 7     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram2 ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; DATA_WIDTH     ; 2     ; Signed Integer                                                         ;
+; ADDR_WIDTH     ; 7     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram3 ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; DATA_WIDTH     ; 2     ; Signed Integer                                                         ;
+; ADDR_WIDTH     ; 7     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram4 ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; DATA_WIDTH     ; 2     ; Signed Integer                                                         ;
+; ADDR_WIDTH     ; 7     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram5 ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; DATA_WIDTH     ; 2     ; Signed Integer                                                         ;
+; ADDR_WIDTH     ; 7     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram6 ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; DATA_WIDTH     ; 2     ; Signed Integer                                                         ;
+; ADDR_WIDTH     ; 7     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram7 ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; DATA_WIDTH     ; 2     ; Signed Integer                                                         ;
+; ADDR_WIDTH     ; 7     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram8 ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; DATA_WIDTH     ; 2     ; Signed Integer                                                         ;
+; ADDR_WIDTH     ; 7     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter:main_counter ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; RAM_ADDR_WIDTH ; 7     ; Signed Integer                           ;
+; initial_state  ; 0     ; Unsigned Binary                          ;
+; start_state    ; 1     ; Unsigned Binary                          ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: vector_delay:vec_D ;
++--------------------+-------+------------------------------------+
+; Parameter Name     ; Value ; Type                               ;
++--------------------+-------+------------------------------------+
+; UNROLLING          ; 4     ; Signed Integer                     ;
+; RAM_ADDR_WIDTH     ; 7     ; Signed Integer                     ;
+; START              ; 000   ; Unsigned Binary                    ;
+; WRITE_IN           ; 001   ; Unsigned Binary                    ;
+; READ_OUT           ; 010   ; Unsigned Binary                    ;
+; READ_OUT_LAST_LINE ; 011   ; Unsigned Binary                    ;
+; END                ; 100   ; Unsigned Binary                    ;
++--------------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SDVM:SDVM_q_Vec ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; Num_bits       ; 4     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SDVM:SDVM_d_Vec ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; Num_bits       ; 4     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: computing_v_value:V_block ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; UNROLLING      ; 4     ; Signed Integer                                ;
+; UPPER_BITS     ; 6     ; Signed Integer                                ;
+; RAM_width      ; 7     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: computing_v_value:V_block|single_clk_ram_4bit:ram1 ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; DATA_WIDTH     ; 4     ; Signed Integer                                                         ;
+; ADDR_WIDTH     ; 7     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: computing_v_value:V_block|single_clk_ram_4bit:ram2 ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; DATA_WIDTH     ; 4     ; Signed Integer                                                         ;
+; ADDR_WIDTH     ; 7     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: computing_v_value:V_block|four_bits_adder:adder1 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; bits           ; 4     ; Signed Integer                                                       ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: computing_w_value:W_block ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; UNROLLING      ; 4     ; Signed Integer                                ;
+; UPPER_BITS     ; 6     ; Signed Integer                                ;
+; RAM_width      ; 7     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: computing_w_value:W_block|four_bits_adder:adder1 ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; bits           ; 4     ; Signed Integer                                                       ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: computing_w_value:W_block|six_bits_adder:adder2 ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; bits           ; 6     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: computing_w_value:W_block|single_clk_ram_4bit:ram1 ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; DATA_WIDTH     ; 4     ; Signed Integer                                                         ;
+; ADDR_WIDTH     ; 7     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: computing_w_value:W_block|single_clk_ram_4bit:ram2 ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; DATA_WIDTH     ; 4     ; Signed Integer                                                         ;
+; ADDR_WIDTH     ; 7     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "computing_w_value:W_block|six_bits_adder:adder2"                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; y_plus[5..4]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; y_minus[5..4] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; z_plus[5]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; z_minus[5]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; cout          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "vector_delay:vec_D"                                                                           ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; x_plus_chosen  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; x_minus_chosen ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "computation_control_hd:FSM"                                                               ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; data_x_rdy ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data_d_rdy ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:13     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Analysis & Synthesis
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+    Info: Processing started: Mon Nov 23 09:35:05 2015
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Divider_hd -c Divider_hd
+Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file src_div_hd/divider_hd.v
+    Info (12023): Found entity 1: Divider_hd
+Info (12021): Found 1 design units, including 1 entities, in source file src_div_hd/generate_ca_reg_hd.v
+    Info (12023): Found entity 1: generate_CA_reg_hd
+Info (12021): Found 1 design units, including 1 entities, in source file src_div_hd/computation_control_hd.v
+    Info (12023): Found entity 1: computation_control_hd
+Info (12021): Found 1 design units, including 1 entities, in source file src_div_hd/counter.v
+    Info (12023): Found entity 1: counter
+Info (12021): Found 1 design units, including 1 entities, in source file src_div_hd/full_adder.v
+    Info (12023): Found entity 1: full_adder
+Info (12021): Found 1 design units, including 1 entities, in source file src_div_hd/d_ff_two_bits.v
+    Info (12023): Found entity 1: D_FF_two_bits
+Info (12021): Found 1 design units, including 1 entities, in source file src_div_hd/single_clk_ram_4bit.v
+    Info (12023): Found entity 1: single_clk_ram_4bit
+Info (12021): Found 1 design units, including 1 entities, in source file src_div_hd/testbench_div_hd.v
+    Info (12023): Found entity 1: testbench_div_hd
+Info (12021): Found 1 design units, including 1 entities, in source file src_div_hd/vector_delay.v
+    Info (12023): Found entity 1: vector_delay
+Info (12021): Found 1 design units, including 1 entities, in source file src_div_hd/sdvm.v
+    Info (12023): Found entity 1: SDVM
+Info (12021): Found 1 design units, including 1 entities, in source file src_div_hd/four_bits_adder.v
+    Info (12023): Found entity 1: four_bits_adder
+Info (12021): Found 1 design units, including 1 entities, in source file src_div_hd/four_bits_parallel_adder.v
+    Info (12023): Found entity 1: four_bits_parallel_adder
+Info (12021): Found 1 design units, including 1 entities, in source file src_div_hd/computing_v_value.v
+    Info (12023): Found entity 1: computing_v_value
+Info (12021): Found 1 design units, including 1 entities, in source file src_div_hd/on_line_adder_block.v
+    Info (12023): Found entity 1: on_line_adder_block
+Info (12021): Found 1 design units, including 1 entities, in source file src_div_hd/computing_w_value.v
+    Info (12023): Found entity 1: computing_w_value
+Info (12021): Found 1 design units, including 1 entities, in source file src_div_hd/six_bits_adder.v
+    Info (12023): Found entity 1: six_bits_adder
+Info (12021): Found 1 design units, including 1 entities, in source file src_div_hd/six_bits_parallel_adder.v
+    Info (12023): Found entity 1: six_bits_parallel_adder
+Info (12021): Found 1 design units, including 1 entities, in source file src_div_hd/single_clk_ram_2bit.v
+    Info (12023): Found entity 1: single_clk_ram_2bit
+Info (12127): Elaborating entity "Divider_hd" for the top level hierarchy
+Info (12128): Elaborating entity "computation_control_hd" for hierarchy "computation_control_hd:FSM"
+Info (12128): Elaborating entity "generate_CA_reg_hd" for hierarchy "generate_CA_reg_hd:CA_reg"
+Warning (10230): Verilog HDL assignment warning at generate_CA_reg_hd.v(36): truncated value with size 32 to match size of target (9)
+Info (12128): Elaborating entity "single_clk_ram_2bit" for hierarchy "generate_CA_reg_hd:CA_reg|single_clk_ram_2bit:ram1"
+Warning (10240): Verilog HDL Always Construct warning at single_clk_ram_2bit.v(29): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
+Info (12128): Elaborating entity "counter" for hierarchy "counter:main_counter"
+Info (12128): Elaborating entity "vector_delay" for hierarchy "vector_delay:vec_D"
+Info (12128): Elaborating entity "SDVM" for hierarchy "SDVM:SDVM_q_Vec"
+Info (12128): Elaborating entity "D_FF_two_bits" for hierarchy "SDVM:SDVM_q_Vec|D_FF_two_bits:D1"
+Info (12128): Elaborating entity "computing_v_value" for hierarchy "computing_v_value:V_block"
+Info (12128): Elaborating entity "single_clk_ram_4bit" for hierarchy "computing_v_value:V_block|single_clk_ram_4bit:ram1"
+Warning (10240): Verilog HDL Always Construct warning at single_clk_ram_4bit.v(29): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
+Info (12128): Elaborating entity "four_bits_adder" for hierarchy "computing_v_value:V_block|four_bits_adder:adder1"
+Info (12128): Elaborating entity "on_line_adder_block" for hierarchy "computing_v_value:V_block|four_bits_adder:adder1|on_line_adder_block:adder_chain[0].Block"
+Info (12128): Elaborating entity "full_adder" for hierarchy "computing_v_value:V_block|four_bits_adder:adder1|on_line_adder_block:adder_chain[0].Block|full_adder:FA1"
+Info (12128): Elaborating entity "computing_w_value" for hierarchy "computing_w_value:W_block"
+Info (12128): Elaborating entity "six_bits_adder" for hierarchy "computing_w_value:W_block|six_bits_adder:adder2"
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Aaron_documents/Newton_method_hd/Online_div_hd/output_files/Divider_hd.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "data_x_rdy"
+    Warning (15610): No output dependent on input pin "data_d_rdy"
+Info (21057): Implemented 8138 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 3 output pins
+    Info (21061): Implemented 8124 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 440 megabytes
+    Info: Processing ended: Mon Nov 23 09:35:22 2015
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:15
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Aaron_documents/Newton_method_hd/Online_div_hd/output_files/Divider_hd.map.smsg.
+
+

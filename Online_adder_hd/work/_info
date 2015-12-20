@@ -1,0 +1,100 @@
+m255
+K3
+vD_flipflop
+!i10b 1
+Z0 !s100 EY=YzPYP34RoGB[2]45kf2
+Z1 Ib:=NEYN=]JbgP<aClAZf@3
+Z2 VzkabIJTQAgIjd``Z:0Z0Q2
+Z3 dC:\Aaron_documents\Newton_method_hd\Online_adder_hd
+Z4 w1444233190
+Z5 8C:/Aaron_documents/Newton_method_hd/Online_adder_hd/src_adder/D_flipflop.v
+Z6 FC:/Aaron_documents/Newton_method_hd/Online_adder_hd/src_adder/D_flipflop.v
+L0 1
+Z7 OV;L;10.1d;51
+r1
+!s85 0
+31
+Z8 !s108 1444510916.512000
+Z9 !s107 C:/Aaron_documents/Newton_method_hd/Online_adder_hd/src_adder/testbench.v|C:/Aaron_documents/Newton_method_hd/Online_adder_hd/src_adder/full_adder.v|C:/Aaron_documents/Newton_method_hd/Online_adder_hd/src_adder/Online_adder_hd.v|C:/Aaron_documents/Newton_method_hd/Online_adder_hd/src_adder/On_line_adder_test2.v|C:/Aaron_documents/Newton_method_hd/Online_adder_hd/src_adder/D_flipflop.v|
+Z10 !s90 -reportprogress|300|-work|work|-O0|C:/Aaron_documents/Newton_method_hd/Online_adder_hd/src_adder/D_flipflop.v|C:/Aaron_documents/Newton_method_hd/Online_adder_hd/src_adder/On_line_adder_test2.v|C:/Aaron_documents/Newton_method_hd/Online_adder_hd/src_adder/Online_adder_hd.v|C:/Aaron_documents/Newton_method_hd/Online_adder_hd/src_adder/full_adder.v|C:/Aaron_documents/Newton_method_hd/Online_adder_hd/src_adder/testbench.v|
+!s101 -O0
+Z11 o-work work -O0
+Z12 n@d_flipflop
+vfull_adder
+!i10b 1
+Z13 !s100 43PdeP_XzT?4i6hVz0MLY0
+Z14 I[B6f]cobiF8Ld02BgmFb13
+Z15 VY<ik;mLW>j9l4DLC>lZ8;0
+R3
+Z16 w1435575119
+Z17 8C:/Aaron_documents/Newton_method_hd/Online_adder_hd/src_adder/full_adder.v
+Z18 FC:/Aaron_documents/Newton_method_hd/Online_adder_hd/src_adder/full_adder.v
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+R11
+vOn_line_adder_test2
+!i10b 1
+Z19 !s100 JQVH^Y;XPaC9[I4MbhmMC0
+Z20 I<VlInjY[lmX^lID<l8Fg_1
+Z21 Vm<]M90N^WHM@]1JPMmJl:2
+R3
+Z22 w1441711560
+Z23 8C:/Aaron_documents/Newton_method_hd/Online_adder_hd/src_adder/On_line_adder_test2.v
+Z24 FC:/Aaron_documents/Newton_method_hd/Online_adder_hd/src_adder/On_line_adder_test2.v
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+R11
+Z25 n@on_line_adder_test2
+vOnline_adder_hd
+!i10b 1
+Z26 !s100 S6H6<SN<`XRnD`LO[XWkW1
+Z27 I;aJ>@GiInA:M5Rml>[:ZG0
+Z28 V][A?W:zOTf9jC`a^jYn3P0
+R3
+Z29 w1444510476
+Z30 8C:/Aaron_documents/Newton_method_hd/Online_adder_hd/src_adder/Online_adder_hd.v
+Z31 FC:/Aaron_documents/Newton_method_hd/Online_adder_hd/src_adder/Online_adder_hd.v
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+R11
+Z32 n@online_adder_hd
+vtestbench
+!i10b 1
+Z33 !s100 4YIdoSheaiIK[0fC=3SYF3
+Z34 IohQmzJNjd7IeM@QjERZ7i1
+Z35 VhGfW:390DM[oDMzegDH9`2
+R3
+Z36 w1444510866
+Z37 8C:/Aaron_documents/Newton_method_hd/Online_adder_hd/src_adder/testbench.v
+Z38 FC:/Aaron_documents/Newton_method_hd/Online_adder_hd/src_adder/testbench.v
+L0 2
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+R11

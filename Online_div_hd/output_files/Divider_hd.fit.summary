@@ -1,0 +1,20 @@
+Fitter Status : Successful - Sun Nov 15 14:21:29 2015
+Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
+Revision Name : Divider_hd
+Top-level Entity Name : Divider_hd
+Family : Cyclone IV GX
+Device : EP4CGX15BF14C6
+Timing Models : Final
+Total logic elements : 458 / 14,400 ( 3 % )
+    Total combinational functions : 398 / 14,400 ( 3 % )
+    Dedicated logic registers : 230 / 14,400 ( 2 % )
+Total registers : 230
+Total pins : 14 / 81 ( 17 % )
+Total virtual pins : 0
+Total memory bits : 3,072 / 552,960 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0
+Total GXB Receiver Channel PCS : 0 / 2 ( 0 % )
+Total GXB Receiver Channel PMA : 0 / 2 ( 0 % )
+Total GXB Transmitter Channel PCS : 0 / 2 ( 0 % )
+Total GXB Transmitter Channel PMA : 0 / 2 ( 0 % )
+Total PLLs : 0 / 3 ( 0 % )
